@@ -1,0 +1,10 @@
+# Dont push IDE and other cached data
+__pycache__/
+*.pyc
+venv/
+.vscode/
+
+dump/
+data/
+*.json
+*.env
