@@ -1,17 +1,23 @@
 #!/usr/bin/env python
 
 # Internal modules
+import concurrent.futures
 import sys
 import os
 import json
+import re
 
-# Externel modules 
+# Externel modules
 from yt_dlp import YoutubeDL
 from yt_dlp import DownloadError
+from bs4 import BeautifulSoup as bs
+import requests as req
 
 # My modules
 import console
 import cache
+
+OUTPUT_PATH = os.path.join(os.getcwd(), 'channels')
 
 def get_metadata(url : str) -> dict:
     """downloads metadata from a url to a youtube channel.
@@ -58,12 +64,10 @@ def get_channel_info(url : str) -> str:
         console.info(f"Channel '{os.path.basename(url)}' is already downloaded")
         return cache.get_path(url)
     
-    base_path = os.path.join(os.getcwd(), "data", "channels")   # where we will store downloaded channels
-    
     metadata = get_metadata(url)
     
     channel_name = metadata['uploader']
-    path = os.path.join(base_path, channel_name, f"{channel_name}.json")
+    path = os.path.join(OUTPUT_PATH, channel_name, f"{channel_name}.json")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     
     with open(path, "w") as f:
@@ -83,7 +87,7 @@ def get_video_titles(url: str) -> None:
         url (str): link to the channel
     """
     try:
-        if cache.have_titles(url):
+        if cache.get_titles(url):
             console.info(f"Titles from channel at '{url}' are already downloaded.")
             return
         path = cache.get_path(url)
@@ -97,40 +101,130 @@ def get_video_titles(url: str) -> None:
     
     with open(metadata_path, 'r') as f:
         metadata = json.load(f)
+    
+    with open(titles_path, 'w') as f:
         if metadata['playlist_count'] > 3:
             for data in metadata['entries']:
-                print(data['id'])
+                f.write(data['id'])
+                f.write('\n')
         else:
             for data in metadata['entries'][0]['entries']:
-                print(data['id'])
-    
-    '''
-    with open(titles_path, 'w') as f:
-        try:
-            for m in metadata['entries'][0][f'{channel_name} - Videos']['entries']:
-                ...
-        except KeyError:
-            print('Error')
-        
-            for m in metadata['entries']:
-                f.write(m['id'])
+                f.write(data['id'])
                 f.write('\n')
-    '''
 
+    cache.set_titles(url, True)
+    
+'''
+def get_videos_info(url: str) -> None:
+    """gets the json of every video of a channel
+
+    Args:
+        url (str): link to a youtube channel
+    """
+    try:
+        if not cache.get_titles(url):
+            console.info(f"All videos from channel '{url}' have their json files downloaded")
+            return
+        path = cache.get_path(url)
+    except KeyError:
+        path = get_video_titles(url)
+        
+    videos_info_path = os.path.join(path, 'videos')
+    titles_path = os.path.join(path, 'titles.csv')
+    base_url = 'https://www.youtube.com/watch?v='
+    
+    params ={
+        "format": "bestaudio/best",
+        "quiet": True,
+        "no_warnings": True,
+        "simulate": True,
+        "dump_single_json": True,
+        "writeinfojson": True,
+        "outtmpl": "temp.mp3"
+    }
+    
+    with open(titles_path, 'r') as f:
+        for l in f:
+            r = req.get(base_url + l)
+            print(base_url + l, end=' ')
+            print(r.status_code)
+            soup = bs(r.text, 'html.parser')
+            found = soup.find(class_='ytp-heat-map-chapter')
+            print(found)
+'''
 
 def get_playback_data(url: str) -> None:
     """Gets playback data from ever video on a youtube channel
 
     Args:
         url (str): link to a youtube channel we will get the playback data from
-    """    
-    ...
+    """
+    try:
+        if cache.get_playback(url):
+            console.info(f"Titles from channel at '{url}' are already downloaded.")
+            return
+        path = cache.get_path(url)
+    except KeyError:
+       path = get_channel_info(url)
+    
+    print(path)
 
 ''' Testing '''
 if __name__ == '__main__':
-    urls = ('https://www.youtube.com/@davidbulay', 'https://www.youtube.com/@JackRhysider')
+    '''
+    urls = ('https://www.youtube.com/@davidbulay', 'https://www.youtube.com/@JackRhysider', 'https://www.youtube.com/@MentalOutlaw')
     for url in urls:
         path = get_channel_info(url)
         get_video_titles(url)
+        get_playback_data(url)
     
-__all__ = ['get_channel_info']
+    get_videos_info(urls[0])
+    
+    url = 'https://www.youtube.com/watch?v=8ZvkaOV82tc'
+    
+    r = req.get(url)
+    soup = bs(r.content, 'html.parser')
+    for script in soup.findAll('script'):
+        if "decorationTimeMillis" in str(script):
+            split = str(script).split("\"decorationTimeMillis\"")[1]
+            print(split[1:].split(',')[0])
+    '''
+
+    path_to_links = R'C:\Users\caleb\source\repos\clipbot\clipbot_core\data\channels\David Bulay\titles.csv'
+    base_url = 'https://www.youtube.com/watch?v='
+    
+    with open(path_to_links, 'r') as f:
+        for n in f:
+            url = base_url + n
+            response = req.get(url)
+            print(f"{response.status_code} {response.url}")
+            
+            soup = bs(response.content, 'html.parser')
+            script = soup.find('script', text=re.compile('decorationTimeMillis'))
+            if not script:
+                continue
+            match = re.search(r'"decorationTimeMillis":\s*(\d+)', script.string)
+            if match:
+                print(match.group(1))
+    
+    exit(0)
+    
+    response = req.get(url)
+    soup = bs(response.content, 'html.parser')
+
+    script = soup.find('script', text=re.compile('decorationTimeMillis'))
+    match = re.search(r'"decorationTimeMillis":\s*(\d+)', script.string)
+    
+    if match:
+        decoration_time = match.group(1)
+        print(decoration_time)
+    else:
+        print('decorationTimeMillis not found in script')
+        exit(0)
+    
+    seconds, milliseconds = divmod(int(decoration_time), 1000)
+    minutes, seconds = divmod(seconds, 60)
+    hours, minutes = divmod(minutes, 60)
+    print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+    
+__all__ = ['get_channel_info', 'get_video_titles']

@@ -119,7 +119,7 @@ def check(url: str) -> bool:
     return False
 
 
-def have_titles(url: str) -> bool:
+def get_titles(url: str) -> bool:
     """Checks if the titles of a channel are already downloaded
 
     Args:
@@ -132,7 +132,7 @@ def have_titles(url: str) -> bool:
     return channel['titles']
 
 
-def have_playback(url: str) -> bool:
+def get_playback(url: str) -> bool:
     """Checks if the playback data of a channel are already downloaded
 
     Args:
@@ -144,6 +144,35 @@ def have_playback(url: str) -> bool:
     channel = get(url)
     return channel['playback']
 
+
+def set_titles(url: str, b: bool) -> None:
+    """Sets titles value for a certain link
+
+    Args:
+        url (str): link to a youtube channel
+        b (bool): value titles will become
+    """
+    cache = read() 
+    for channel in cache['channels']:
+        if channel['url'] == url:
+            channel['titles'] = b
+    write(cache)
+    
+
+def set_playback(url: str, b: bool) -> None:
+    """Sets playback value for a certain link
+
+    Args:
+        url (str): link to a youtube channel
+        b (bool): value playback will become
+    """
+    cache = read()
+    for channel in cache['channels']:
+        if channel['url'] == url:
+            channel['playback'] = b
+    write(cache)
+
+
 ''' Testing '''
 if __name__ == '__main__':
     read()
@@ -153,19 +182,19 @@ if __name__ == '__main__':
     
     if check(f"{test_url}_1"):
         print(f"{get_path(f'{test_url}_1')=}")
-        print(f"{have_titles(f'{test_url}_1')=}")
-        print(f"{have_playback(f'{test_url}_1')=}")
+        print(f"{get_titles(f'{test_url}_1')=}")
+        print(f"{get_playback(f'{test_url}_1')=}")
     try:
         print(get_path("invalid path"))
     except KeyError:
         ...
     try:
-        print(have_titles("invalid path"))
+        print(get_titles("invalid path"))
     except KeyError:
         ...
     try:
-        print(have_playback("invalid path"))
+        print(get_playback("invalid path"))
     except KeyError:
         ...
     
-__all__ = ['add', 'get_path', 'check']
+__all__ = ['check', 'add', 'get_path', 'get_titles', 'get_playback', 'set_titles', 'set_playback']
