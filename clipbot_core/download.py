@@ -14,8 +14,8 @@ from bs4 import BeautifulSoup as bs
 import requests as req
 
 # My modules
-import console
-import cache
+from clipbot_core import console
+from clipbot_core import cache
 
 OUTPUT_PATH = os.path.join(os.getcwd(), 'channels')
 

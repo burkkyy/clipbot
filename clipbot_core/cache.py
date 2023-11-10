@@ -4,7 +4,7 @@
 import json
 
 # My modules
-import console
+from clipbot_core import console
 
 # relative path of where the cache will be stored, go nuts with this
 CACHE_PATH = "cache.json"
