@@ -3,9 +3,6 @@
 # Internal modules
 import json
 
-# My modules
-import clipbot_core as core
-
 if __name__ == '__main__':
     # step 1: get the channel to download
 
