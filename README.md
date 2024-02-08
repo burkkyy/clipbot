@@ -1,0 +1,5 @@
+# Clipbot
+
+## Contributors
+Caleb Burke
+
