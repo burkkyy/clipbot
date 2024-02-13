@@ -18,7 +18,7 @@ class YTMP4Downloader:
             print(f'Error: {str(e)}')
 
 if __name__ == "__main__":
-    downloader = MP4Downloader()
+    downloader = YTMP4Downloader()
     url = input("Enter the URL of the video you want to download: ")
     output_path = input("Enter the path where you want to save the video (leave blank for current directory): ").strip()
     if output_path == '':
