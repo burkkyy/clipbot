@@ -33,7 +33,7 @@ class InstagramDM:
 
 
 if __name__ == '__main__':
-    instagram_bot = InstagramDM(username="py_test_bot", password="X58k2vda6KMs")
+    instagram_bot = InstagramDM(username="insert username ", password="Insert password")
     folder_path = "E:\Clipbot\clipbot\config"  # Replace this with the path to the folder you want to remove
     remover = FolderRemover()
     remover.remove_folder(folder_path)

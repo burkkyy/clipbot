@@ -20,7 +20,7 @@ class InstagramBot:
 if __name__ == '__main__':
     # enter name of your image below
     image_name = "gigachad.jpg"
-    bot = InstagramBot(username="py_test_bot", password="X58k2vda6KMs")
+    bot = InstagramBot(username="Insert username here", password="Insert password here")
     folder_path = "E:\Clipbot\clipbot\config"  # Replace this with the path to the folder you want to remove
     remover = FolderRemover()
     remover.remove_folder(folder_path)
