@@ -7,7 +7,7 @@ class YTMP4Downloader:
     def download_video(self, url, output_path='./'):
         try:
             yt = YouTube(url)
-            stream = yt.streams.filter(res='2160p', file_extension='mp4', progressive=True).first()
+            stream = yt.streams.filter(file_extension='mp4', progressive=True).first()
             if stream:
                 print(f'Downloading: {yt.title}...')
                 stream.download(output_path)
