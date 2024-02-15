@@ -1,5 +1,0 @@
-import Instaloader
-
-if __name__ == "__main__":
-	insta = InstaScraper()   
-	insta.download(insta.input_url)
