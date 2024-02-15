@@ -8,7 +8,6 @@
 @brief Main Entry point for clipbot
 '''
 
-=======
 import util
 
 if __name__ == '__main__':
