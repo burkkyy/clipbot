@@ -1,10 +1,21 @@
 #!/usr/bin/env python
 
+'''
+@file util/cache.py
+@author Caleb Burke
+@date 2024-02-12
+
+Caching for clipbot.
+
+Currently broken code, do not use.
+
+'''
+
 # Internal modules
 import json
 
 # My modules
-from clipbot_core import console
+from util import console
 
 # relative path of where the cache will be stored, go nuts with this
 CACHE_PATH = "cache.json"

@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+'''
+@file util/console.py
+@author Caleb Burke
+@date 2024-02-12
+'''
+
 from enum import Enum
 import os
 os.system('color')  # enable color in the console
@@ -86,21 +92,7 @@ def clear() -> None:
     os.system('cls') if os.name == 'nt' else os.system('clear')
 
 
-def display() -> None:
-    """display screen for console cli
-    """    
-    clear()
-    print(R'''Welcome to clipbot!
-     ____
- ___/    \___
-/ . '----' . \
-'--________--'
-     //\\
-    ///\\\
-   ////\\\\
-  /////\\\\\
-''')
-
 __all__ = ['error', 'warning', 'info', 'update',
            'clear', 'display', 'print_info', 'print_updates', 
            'print_warnings', 'print_errors']
+
