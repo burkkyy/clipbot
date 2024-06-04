@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Currently broken code, do not use.
+
 # Internal modules
 import concurrent.futures
 import sys

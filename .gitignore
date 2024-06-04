@@ -4,7 +4,13 @@ __pycache__/
 venv/
 .vscode/
 
+config/
+
 dump/
 data/
 *.json
 *.env
+
+# Very important
+secret/
+

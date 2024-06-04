@@ -1,25 +1,15 @@
 #!/usr/bin/python
 
-# Internal modules
-import json
+'''
+@file clipbot.py
+@author Caleb Burke
+@author Josh Campanile
+@date 2024-02-12
+@brief Main Entry point for clipbot
+'''
 
-# My modules
-import clipbot_core as core
+import util
 
 if __name__ == '__main__':
-    # step 1: get the channel to download
+    pass
 
-    # step 2: download channel
-
-    # channel_url = "https://www.youtube.com/@MentalOutlaw"
-    # download(channel_url)
-    
-    '''
-    with open("dump/dump.json", "r") as f:
-        data = json.load(f)
-
-    for d in data['entries'][0]['entries']:
-        print(f"\033[92m(+)\033[0m found video {{id: {d['id']}\ttitle: {d['title']}}}")
-    '''
-
-    core.display()
