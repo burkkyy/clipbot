@@ -1,0 +1,113 @@
+<mxfile host="app.diagrams.net" modified="2024-06-04T06:04:28.678Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="9ZaK14StzFRWjp0EZAnu" version="24.4.13" type="device">
+  <diagram name="Page-1" id="zQwRqZsz7qoEHeTczQc1">
+    <mxGraphModel dx="2028" dy="1076" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="413" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w65s7kxYsl1DEc4HLG__-1" value="Youtube" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="47" y="10" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-2" value="Tiktok" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="197" y="10" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-3" target="w65s7kxYsl1DEc4HLG__-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-3" target="w65s7kxYsl1DEc4HLG__-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-3" target="w65s7kxYsl1DEc4HLG__-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="243" y="440" />
+              <mxPoint x="112" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-3" target="w65s7kxYsl1DEc4HLG__-25">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="308" y="410" />
+              <mxPoint x="192" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-3" value="Clipbot daemon" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="210" y="480" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-9" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endFill=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-22" target="w65s7kxYsl1DEc4HLG__-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="272" y="420" as="sourcePoint" />
+            <mxPoint x="322" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-4" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endFill=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-21" target="w65s7kxYsl1DEc4HLG__-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="132" y="270" as="sourcePoint" />
+            <mxPoint x="232" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-8" value="GET&amp;nbsp; Videos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="47" y="110" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-16" value="Clipbot video editor Service" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="387.5" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-18" value="Videos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="447.5" width="60" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-21" value="Youtube Integration" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="12" y="210" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-22" value="Tiktok Integration" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="162" y="210" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-23" value="GET&amp;nbsp; Videos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="110" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-25" target="w65s7kxYsl1DEc4HLG__-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-25" target="w65s7kxYsl1DEc4HLG__-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-25" value="Media Handler Service" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="72" y="310" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-31" value="REQUEST&amp;nbsp; Videos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="422.5" width="80" height="42.5" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-33" target="w65s7kxYsl1DEc4HLG__-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-33" value="Clipbot db" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.database;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="215" y="620" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-39" value="Clipbot video ranking Service" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="440" y="490" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-41" target="w65s7kxYsl1DEc4HLG__-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-41" value="Clipbot frontend UI" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="12" y="590" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-42" target="w65s7kxYsl1DEc4HLG__-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-42" value="Clipbot backend API" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="12" y="480" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="w65s7kxYsl1DEc4HLG__-43" target="w65s7kxYsl1DEc4HLG__-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-43" value="IOT device (client/user)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="40.5" y="720" width="73" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="w65s7kxYsl1DEc4HLG__-49" value="POST&amp;nbsp; Videos" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="232" y="382.5" width="60" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
